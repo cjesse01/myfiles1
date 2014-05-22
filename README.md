@@ -16,10 +16,12 @@
 *     README.txt          (documentation)
 *     activity_labels.txt (data: mapping of activity number to description)
 *     features.txt        (data: list of feature measurement names)
+
 ### ./UCI HAR Dataset/train, files used:
-####     X_train.txt         (data: feature measurements for the TRAINing group)
-####     y_train.txt         (data: activity number associated with the rows of X_.txt)
-####     subject_train.txt   (data: subject number associated with the rows of X_.txt)
+*     X_train.txt         (data: feature measurements for the TRAINing group)
+*     y_train.txt         (data: activity number associated with the rows of X_.txt)
+*     subject_train.txt   (data: subject number associated with the rows of X_.txt)
+
 ### ./UCI HAR Dataset/test, files used:
 ####     X_test.txt          (data: feature measurements for the TESTing group)
 ####     y_test.txt          (data: activity number associated with the rows of X_.txt)
