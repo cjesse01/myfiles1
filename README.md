@@ -32,14 +32,10 @@
 
 ###ii) DATA EXPLORATION CONCLUSIONS
 ###After reading all the data documentation, the project instructions, and working with the above 8 data files in their raw state, I drew the following conclusions. These conclusions drive the manipulation of the data in run_analysis.R.
-###Conclusion1:
-###Thirty-three variables of the feature vector are listed in the features_info.txt document. These 33 variables each have a mean() and std() estimate in the features.txt data, and thus this drives the 66 columns (of 561 available) chosen to extract from the X_.txt files.
-###Conclusion2:
-###For my column names in X_.txt, I descided to standardize the feature descriptions in feature.txt by stripping out only punctuation, but keeping the mixed case nature of the labels. For example:  the feature description tBodyAcc-mean()-X was standardized to tBodyAccmeanX as the associated column name in X_.txt. I did this to maintain the language of the data, as estabished by the authors of the data documentation. I felt it was easier to visually tie back to the documentation this way also.
-###Conclusion3:
-###The 561 rows of features.txt are dimensionally alligned to the 561 columns of the X_.txt files.  In other words, row 1 of features.txt describes col 1 in the X_.txt files; row 2 features.txt describes column 2 X_.txt, etc.
-###Conclusion4:
-###The row counts are the same for the files X_.txt, y_.txt, and subject_.txt. Thus the original row order is used to marry the activity and subject specification to each row of the X_.txt data.
+* Conclusion1: Thirty-three variables of the feature vector are listed in the features_info.txt document. These 33 variables each have a mean() and std() estimate in the features.txt data, and thus this drives the 66 columns (of 561 available) chosen to extract from the X_.txt files.
+* Conclusion2: For my column names in X_.txt, I descided to standardize the feature descriptions in feature.txt by stripping out only punctuation, but keeping the mixed case nature of the labels. For example:  the feature description tBodyAcc-mean()-X was standardized to tBodyAccmeanX as the associated column name in X_.txt. I did this to maintain the language of the data, as estabished by the authors of the data documentation. I felt it was easier to visually tie back to the documentation this way also.
+* Conclusion3: The 561 rows of features.txt are dimensionally alligned to the 561 columns of the X_.txt files.  In other words, row 1 of features.txt describes col 1 in the X_.txt files; row 2 features.txt describes column 2 X_.txt, etc.
+* Conclusion4: The row counts are the same for the files X_.txt, y_.txt, and subject_.txt. Thus the original row order is used to marry the activity and subject specification to each row of the X_.txt data.
 
 ##PROCESS FLOW run_analysis.R
 ###NOTE: within run_analysis.R there are many comment lines. In addition, with each R object creation, I include a variety of diagnostics to assess the object accuracy: str(), head(), tail(), unique(), xtabs(), summary(), etc, as appropriate for checking quality. I hope I will not get downgraded for leaving these diagnostics in the program.
