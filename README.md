@@ -1,6 +1,6 @@
 ##FILE: README.md
 ###AUTHOR: cjesse01
-###Thank you for your Peer Assessment! :)
+###Thank you for your Peer Assessment! :) Please forgive my inexperience with markdown.
 ###DETAILS: This markdown file describes the process used to create tidydata2.txt. 
 ###It includes discussion of all steps:
 * Download and unzip of the zip file at the website
@@ -79,18 +79,22 @@
 
 ##MERGE the TEST and TRAIN data frames
 ###I) Combine the TRAIN and TEST data into one Tidy Data Set
-* This is the FIRST tidy data set, the result of a simple rbind() of the traindatafinal and testdatafinal dataframes.  Write it out to the WD as a csv.
-* Result: ./tidydata1.csv, 10299 rows x 71 cols, as expected.
-* This is a "short and wide" tidy data set. The combination of subjectNBR, activityNBR (or activityDESC), and recTRACER uniquely identifies a row.
+* rbind() the traindatafinal and testdatafinal dataframes.
+* write the data frame out to the WD as a comma delimited .csv.
+* this is the FIRST tidy data set, a "short and wide" layout
+* the combination of subjectNBR, activityNBR (or activityDESC), and recTRACER uniquely identifies a row
+* RESULT: ./tidydata1.csv, 10299 rows x 71 cols, as expected.
 
 ###J) Create a SECOND tidy data set from tidydata1
-* Read tidydata1.csv into R. 
-* Use melt() on the file to get it into a tall skinny format.  
-* Manipulate the subjectNBR and activityDESC columns into new column, subjectNBR_activityDESC, for use with dcast() to get the means on all 66 features.
-* Use melt() again to make the means file tall and skinny.
-* Use colSplit() on subjectNBR_activityDESC column to break back into its components. 
-* Spot check the calculation for some test cases to ensure process is correct. Write the SECOND tidy data set out as tab delimited .txt for COURSERA upload.
-* Result: ./tidydata2.txt, 11880 rows x 4 cols, subjectNBR, activityDESC, featurename, and mean
-* tidydata2.txt is a "tall and skinny" tidy data set, so row count 11880 is 30 (subjects) x 6 (activities) x 66 (features).
-* The combination of subjectNBR, activityNBR, and featurename uniquely identifies a row in tidydata2. 
-**The mean column is the average feature value, across all rows of tidydata1, for a particular subjectNBR and ativityDESC.
+* read tidydata1.csv into R. 
+* use melt() on the file to get it into a tall skinny format.  
+* manipulate the subjectNBR and activityDESC columns into new column, subjectNBR_activityDESC, for use with dcast() to get the means on all 66 features
+* use melt() again to make the means file tall and skinny
+* use colSplit() on subjectNBR_activityDESC column to break back into its components 
+* spot check the calculation for some test cases to ensure process is correct
+* write the data frame out to the WD as a tab delimited .txt
+* this is the SECOND tidy data set, a "tall and skinny" layout
+* since tidydata2.txt is "tall and skinny", row count 11880 is 30 (subjects) x 6 (activities) x 66 (features).
+* the combination of subjectNBR, activityNBR, and featureDESCstandard uniquely identifies a row in tidydata2. 
+* the mean column in tidydata2 is the average feature value, across all rows of tidydata1, for a particular subjectNBR and ativityDESC.
+* RESULT: ./tidydata2.txt, 11880 rows x 4 cols, subjectNBR, activityDESC, featureDESCstandard, and mean
