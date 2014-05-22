@@ -23,9 +23,10 @@
 *     subject_train.txt   (data: subject number associated with the rows of X_.txt)
 
 ### ./UCI HAR Dataset/test, files used:
-####     X_test.txt          (data: feature measurements for the TESTing group)
-####     y_test.txt          (data: activity number associated with the rows of X_.txt)
-####     subject_test.txt    (data: subject number associated with the rows of X_.txt)
+*     X_test.txt          (data: feature measurements for the TESTing group)
+*     y_test.txt          (data: activity number associated with the rows of X_.txt
+*     subject_test.txt    (data: subject number associated with the rows of X_.txt)
+
 ### ./UCI HAR Dataset/test/Inertial Signals, this data not needed
 ### ./UCI HAR Dataset/train/Inertial Signals, this data not needed
 
