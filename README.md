@@ -1,6 +1,6 @@
 ##FILE: README.md
 ###AUTHOR: cjesse01
-###Thank you for your Peer Assessment! :) Please forgive my inexperience with markdown.
+###Thank you for your Peer Assessment! :) Please forgive my very basic markdown.
 ###DETAILS: This markdown file describes the process used to create tidydata2.txt. 
 ###It includes discussion of all steps:
 * Download and unzip of the zip file at the website
