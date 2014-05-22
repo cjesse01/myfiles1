@@ -56,31 +56,41 @@
    
 ##READ/SHAPE TRAINing data files in ./UCI HAR Dataset/train
 ###A) Read and Process X_train.txt, the feature values file
-###Read the file into R. Use the featurelist66 vector to subset the 66 columns. Use the feature66 dataframe to name the 66 columns. Create a record tracer, recTRACER, that can be used in joins and for sorting back to the original row order where needed.
-###Result: dataframe: X_wID, 7352 rows x 67 cols, recTRACER and 66 features
-###B) Read and Process y_train.txt, the activity map for X_train.txt
-###Read the file into R. Create a record tracer, recTRACER, that can be used in joins and for sorting back to the original row order where needed. Use the activity dataframe to marry activity description, activityDESC, to each row of y_*.txt via activityNBR.
-###Result: dataframe: y_wID3,  7352 rows x 3 cols, recTRACER, activityNBR, activityDESC 
-###C) Read and Process subject_train.txt, the subject map for X_train.txt
-###Read the file into R. Create a record tracer, recTRACER, that can be used in joins and for sorting back to the original row order where needed.
-###Result: dataframe: subject_wID, 7352 rows x 2 cols, recTRACER and subjectNBR
-###D) Create the FINAL TRAIN DATA SET
-###Merge the dataframes subject_wID, y_wID3, and X_wID via the recTRACER. 
-###Add a column subjectgroup that has the value "TRAIN" for every record.
-###Result: dataframe: traindatafinal, 7352 rows x 71 cols, subjectgroup, recTRACER, subjectNBR, activityNBR, activityDESC, and 66 feature columns
+* Read the file into R. Use the featurelist66 vector to subset the 66 columns. Use the feature66 dataframe to name the 66 columns. Create a record tracer, recTRACER, that can be used in joins and for sorting back to the original row order where needed.
+* Result: dataframe: X_wID, 7352 rows x 67 cols, recTRACER and 66 features
 
-   
+###B) Read and Process y_train.txt, the activity map for X_train.txt
+* Read the file into R. Create a record tracer, recTRACER, that can be used in joins and for sorting back to the original row order where needed. Use the activity dataframe to marry activity description, activityDESC, to each row of y_.txt via activityNBR.
+* Result: dataframe: y_wID3,  7352 rows x 3 cols, recTRACER, activityNBR, activityDESC
+
+###C) Read and Process subject_train.txt, the subject map for X_train.txt
+* Read the file into R. Create a record tracer, recTRACER, that can be used in joins and for sorting back to the original row order where needed.
+* Result: dataframe: subject_wID, 7352 rows x 2 cols, recTRACER and subjectNBR
+
+###D) Create the FINAL TRAIN DATA SET
+* Merge the dataframes subject_wID, y_wID3, and X_wID via the recTRACER. 
+* Add a column subjectgroup that has the value "TRAIN" for every record.
+* Result: dataframe: traindatafinal, 7352 rows x 71 cols, subjectgroup, recTRACER, subjectNBR, activityNBR, activityDESC, and 66 feature columns
+
+
 ##READ/SHAPE TESTing data files in ./UCI HAR Dataset/test
 ###Steps E), F), G), H) are a repeat of Steps A), B), C), D), respectively, but for the test files.
-###Result: dataframe: testdatafinal, 2947 rows x 71 cols, subjectgroup (set to "TEST"), recTRACER, subjectNBR, activityNBR, activityDESC, and the 66 feature columns.
+* Result: dataframe: testdatafinal, 2947 rows x 71 cols, subjectgroup (set to "TEST"), recTRACER, subjectNBR, activityNBR, activityDESC, and the 66 feature columns.
 
-##merge the Test and Train data frames
+##MERGE the TEST and TRAIN data frames
 ###I) Combine the TRAIN and TEST data into one Tidy Data Set
-###This is the FIRST tidy data set, the result of a simple rbind() of the traindatafinal and testdatafinal dataframes.  Write it out to the WD as a csv.
-###Result: ./tidydata1.csv, 10299 rows x 71 cols, as expected.
-###This is a "short and wide" tidy data set. The combination of subjectNBR, activityNBR (or activityDESC), and recTRACER uniquely identifies a row.
+* This is the FIRST tidy data set, the result of a simple rbind() of the traindatafinal and testdatafinal dataframes.  Write it out to the WD as a csv.
+* Result: ./tidydata1.csv, 10299 rows x 71 cols, as expected.
+* This is a "short and wide" tidy data set. The combination of subjectNBR, activityNBR (or activityDESC), and recTRACER uniquely identifies a row.
 
 ###J) Create a SECOND tidy data set from tidydata1
-###Read tidydata1.csv into R. Use melt() on the file to get it into a tall skinny format.  Manipulate the subjectNBR and activityDESC columns into new column, subjectNBR_activityDESC, for use with dcast() to get the means on all 66 features. Use melt() again to make the means file tall and skinny. Use colSplit() on subjectNBR_activityDESC column to break back into its components. Spot check the calculation for some test cases to ensure process is correct. Write the SECOND tidy data set out as tab delimited .txt for COURSERA upload.
-###Result: ./tidydata2.txt, 11880 rows x 4 cols, subjectNBR, activityDESC, featurename, and mean
-###This is a "tall and skinny" tidy data set, so row count 11880 is 30 (subjects) x 6 (activities) x 66 (features). The combination of subjectNBR, activityNBR, and featurename uniquely identifies a row in tidydata2. The mean column is the average feature value, across all rows of tidydata1, for a particular subjectNBR and ativityDESC.
+* Read tidydata1.csv into R. 
+* Use melt() on the file to get it into a tall skinny format.  
+* Manipulate the subjectNBR and activityDESC columns into new column, subjectNBR_activityDESC, for use with dcast() to get the means on all 66 features.
+* Use melt() again to make the means file tall and skinny.
+* Use colSplit() on subjectNBR_activityDESC column to break back into its components. 
+* Spot check the calculation for some test cases to ensure process is correct. Write the SECOND tidy data set out as tab delimited .txt for COURSERA upload.
+* Result: ./tidydata2.txt, 11880 rows x 4 cols, subjectNBR, activityDESC, featurename, and mean
+* tidydata2.txt is a "tall and skinny" tidy data set, so row count 11880 is 30 (subjects) x 6 (activities) x 66 (features).
+* The combination of subjectNBR, activityNBR, and featurename uniquely identifies a row in tidydata2. 
+**The mean column is the average feature value, across all rows of tidydata1, for a particular subjectNBR and ativityDESC.
