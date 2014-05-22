@@ -1,7 +1,7 @@
 ##FILE: CodeBook.md
 ###AUTHOR: cjesse01
 ###DETAILS: This markdown file is the Code Book for the file tidydata2.txt.  
-###Thank you for you Peer Assessment! :)
+###Thank you for your Peer Assessment! :)
 
 ##Code Book For:
 ###DATA FILE: tidydata2.txt
