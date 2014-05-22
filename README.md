@@ -42,14 +42,16 @@
 
 ##READ/SHAPE data files in directory ./UCI HAR Dataset
 ###1) Read/Shape activity_labels.txt
-###Result: dataframe: activity, 6 rows x 2 cols, activityNBR and activityDESC
-###2) Create a feature list
-###Based on Conclusion1, manually make a 'positional vector' for extracting the 66 columns of X_*.txt.  This is a simple vector of the associated 66 featureNBRs.
-###Result: vector: featurelist66, 66 rows x 1 cols, integer
-##3) Read/Shape feature.txt
-###Result: dataframe: feature, 561 rows x 2 cols, featureNBR and featureDESC
-###Use the featurelist66 vector to subset 66 rows and create a standardized feature label festureDESCstandard (see Conclusion2)
-###Result: dataframe: feature66, 66 rows x 3 cols, featureNBR, featureDESC, featureDESCstandard
+* Result: dataframe: activity, 6 rows x 2 cols, activityNBR and activityDESC
+
+###2) Create a feature positional vector
+* Based on Conclusion1, manually make a 'positional vector' for extracting the 66 columns of X_.txt.  This is a simple vector of the associated 66 featureNBRs.
+* Result: vector: featurelist66, 66 rows x 1 cols, integer
+
+###3) Read/Shape feature.txt
+* Result: dataframe: feature, 561 rows x 2 cols, featureNBR and featureDESC
+* Use the featurelist66 vector to subset 66 rows and create a standardized feature label festureDESCstandard (see Conclusion2)
+* Result: dataframe: feature66, 66 rows x 3 cols, featureNBR, featureDESC, featureDESCstandard
    
    
 ##READ/SHAPE TRAINing data files in ./UCI HAR Dataset/train
