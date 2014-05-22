@@ -1,7 +1,7 @@
 ##FILE: CodeBook.md
 ###AUTHOR: cjesse01
 ###DETAILS: This markdown file is the Code Book for the file tidydata2.txt.  
-###(THANK YOU FOR YOUR PEER ASSESSMENT!)
+###Thank you for you Peer Assessment! :)
 
 ##Code Book For:
 ###DATA FILE: tidydata2.txt
@@ -29,7 +29,7 @@
 ##Column Number: 3
 ###Column Name: featureDESCstandard
 ###R Type: Factor w/ 66 levels
-###values: The 66 levels of the field are the standardized feature descriptions, representing 33 chosen features, either thier mean() or std() measure.
+###values: The 66 levels of the field are the standardized feature descriptions, representing 33 chosen features, either thier mean() or std() measure. Standardardization simply removes the punctuation. Example: the feature description tBodyAcc-mean()-X is standardized to tBodyAccmeanX.
 
 ##Column Number: 4
 ###Column Name: mean
