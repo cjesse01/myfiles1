@@ -1,7 +1,7 @@
 ##FILE: CodeBook.md
 ###AUTHOR: cjesse01
-###DETAILS: This markdown file is the Code Book for the file tidydata2.txt.  
-###Thank you for your Peer Assessment! :) Please forgive my very basic markdown.
+###I only know very basic markdown at this point. :(
+###Thank you for your Peer Assessment! :)
 
 ##Code Book For:
 ###DATA FILE: tidydata2.txt
@@ -18,13 +18,7 @@
 ##Column Number: 2
 ###Column Name: activityDESC
 ###R Type: Factor w/ 6 levels
-###values: descriptor for the 6 types of activities performed by each subject
-###WALKING
-###WALKING_UPSTAIRS
-###WALKING_DOWNSTAIRS
-###SITTING
-###STANDING
-###LAYING
+###values: descriptor for the 6 types of activities performed by each subject: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 
 ##Column Number: 3
 ###Column Name: featureDESCstandard
@@ -35,3 +29,5 @@
 ###Column Name: mean
 ###R Type: num
 ###values: The 'mean' column is the average for the featureDESCstandard, across all rows of tidydata1 (the combined train and test data, in short/wide format), for a particular subjectNBR and ativityDESC combination.
+
+##FIN... :)

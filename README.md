@@ -1,6 +1,7 @@
 ##FILE: README.md
 ###AUTHOR: cjesse01
-###Thank you for your Peer Assessment! :) Please forgive my very basic markdown.
+###I only know very basic markdown at this point. :(
+###Thank you for your Peer Assessment! :) 
 ###DETAILS: This markdown file describes the process used to create tidydata2.txt. 
 ###It includes discussion of all steps:
 * Download and unzip of the zip file at the website
@@ -27,11 +28,11 @@
 *     y_test.txt          (data: activity number associated with the rows of X_.txt
 *     subject_test.txt    (data: subject number associated with the rows of X_.txt)
 
-### ./UCI HAR Dataset/test/Inertial Signals, this data not needed
-### ./UCI HAR Dataset/train/Inertial Signals, this data not needed
+### ./UCI HAR Dataset/test/Inertial Signals, these data not needed
+### ./UCI HAR Dataset/train/Inertial Signals, these data not needed
 
 ###ii) DATA EXPLORATION AND CONCLUSIONS
-###After reading all the data documentation, the project instructions, and working with the above 8 data files in their raw state, I drew the following conclusions. These conclusions drive the manipulation of the data in run_analysis.R.
+####After reading all the data documentation, the project instructions, and working with the above 8 data files in their raw state, I drew the following conclusions. These conclusions drive the manipulation of the data in run_analysis.R.
 * Conclusion 1: Thirty-three variables of the feature vector are listed in the features_info.txt document. These 33 variables each have a mean() and std() estimate in the features.txt data, and this drives the 66 columns (of 561 available) chosen to extract from the X_.txt files.
 * Conclusion 2: For my column names in X_.txt, I decided to standardize the feature descriptions in feature.txt by stripping out only punctuation, but keeping the mixed case nature of the labels. For example:  the feature description tBodyAcc-mean()-X was standardized to tBodyAccmeanX as the associated column name in X_.txt. I did this to maintain the language of the data, as estabished by the authors of the data documentation. I felt it was easier to visually tie back to the documentation this way also.
 * Conclusion 3: The 561 rows of features.txt are dimensionally alligned to the 561 columns of the X_.txt files.  In other words, row 1 of features.txt describes col 1 of X_.txt files; row 2 of features.txt describes column 2 of X_.txt; etc.
@@ -39,8 +40,9 @@
 
 ##PROCESS FLOW in run_analysis.R
 ###NOTEs: 
-* within run_analysis.R there are many comment lines
-* with each R object creation, I include a variety of diagnostics to assess the object accuracy: str(), head(), tail(), unique(), xtabs(), summary(), etc, as appropriate for checking quality. I hope I will not get downgraded for leaving these diagnostics in the program.
+* run_analysis.R contains many comment lines along with active code
+* with each R object creation, I include a variety of diagnostics to assess the object accuracy: str(), head(), tail(), unique(), xtabs(), summary(), etc, as appropriate for checking quality
+* I beleive these comments and diagnostic checks for quality should be part of the final program
 
 ##READ/SHAPE data files in directory ./UCI HAR Dataset
 ###1) Read/Shape activity_labels.txt
@@ -112,4 +114,4 @@
 * FINAL RESULT: ./tidydata2.txt, 11880 rows x 4 cols (subjectNBR, activityDESC, featureDESCstandard, and mean)
 
 ##UPLOAD tidydata2.txt as an attachment into Coursera.org
-##FIN..
+##FIN... :)
