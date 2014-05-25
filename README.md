@@ -1,7 +1,5 @@
 ##FILE: README.md
 ###AUTHOR: cjesse01
-###I only know very basic markdown at this point. :(
-###Thank you for your Peer Assessment! :) 
 ###DETAILS: This markdown file describes the process used to create tidydata2.txt. 
 ###It includes discussion of all steps:
 * Download and unzip of the zip file at the website
@@ -113,5 +111,7 @@
 * the mean column in tidydata2 is the average feature value, across all rows of tidydata1, for a particular subjectNBR and ativityDESC.
 * FINAL RESULT: ./tidydata2.txt, 11880 rows x 4 cols (subjectNBR, activityDESC, featureDESCstandard, and mean)
 
-##UPLOAD tidydata2.txt as an attachment into Coursera.org
+##Lastly, UPLOAD tidydata2.txt as an attachment into Coursera.org
+
 ##FIN... :)
+###Thank you for your Peer Assessment! :) 
